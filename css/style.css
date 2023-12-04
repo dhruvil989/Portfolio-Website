@@ -78,7 +78,7 @@ h6 {
     height: 100vh;
     overflow-y: auto;
     width: 280px;
-    background-color: #fff;
+    background-color: rgb(8, 8, 8);
     top: 0;
     left: -280px;
     padding: 20px;
@@ -107,7 +107,7 @@ h6 {
 }
 @media screen and (max-width: 767px) {
   .header .navbar .navbar-scrollpy .nav-pills .nav-item .nav-link {
-    color: #000;
+    color: #fff;
     display: inline;
   }
 }
@@ -149,7 +149,7 @@ h6 {
   }
 }
 .header .navbar .close-icon i {
-  color: #000;
+  color: #fff;
   font-size: 45px;
 }
 
