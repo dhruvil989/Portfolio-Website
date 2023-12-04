@@ -19,4 +19,13 @@ $(document).ready(function(){
         $("#line-clamp-4").toggleClass("line-clamp-2");
         $('#less4').toggleClass('d-block');
     });
+    $(".menu-icon").click(function () {
+        $(".navbar-scrollpy").addClass("open-navbar");
+    });
+    $(".close-icon").click(function () {
+        $(".navbar-scrollpy").removeClass("open-navbar");
+    })
 })
+
+// aos-animation
+AOS.init();

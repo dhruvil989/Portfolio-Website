@@ -3,6 +3,10 @@
   box-sizing: border-box;
 }
 
+html, body {
+  overflow-x: hidden;
+}
+
 body {
   font-family: "SF Pro Display", sans-serif;
   line-height: 1.5;
@@ -34,53 +38,141 @@ h6 {
 }
 
 .header {
-  padding: 12px 0px;
+  padding: 12px 60px;
   border-bottom: 1px solid rgba(255, 255, 255, 0.16);
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
+  height: 83px;
   background-color: #000;
   z-index: 99;
 }
-.header .container .navbar {
+@media screen and (max-width: 767px) {
+  .header {
+    padding: 5px 20px;
+    height: auto;
+  }
+}
+.header .navbar {
   padding: 0;
 }
-.header .container .navbar .navbar-brand p {
+.header .navbar .navbar-brand p {
   font-size: 32px;
   color: #fff;
   font-weight: 700;
 }
-.header .container .navbar .navbar-brand p span {
+.header .navbar .navbar-brand p span {
   color: #8f9094;
   font-weight: 600;
+  margin-right: 1px;
+  margin-left: 1px;
 }
-.header .container .navbar .navbar-scrollpy .nav-pills .nav-item .nav-link {
+.header .navbar .navbar-scrollpy {
+  transition: all 0.4s;
+}
+@media screen and (max-width: 767px) {
+  .header .navbar .navbar-scrollpy {
+    position: fixed;
+    height: 100vh;
+    overflow-y: auto;
+    width: 280px;
+    background-color: #fff;
+    top: 0;
+    left: -280px;
+    padding: 20px;
+    z-index: 100;
+  }
+}
+.header .navbar .navbar-scrollpy.open-navbar {
+  left: 0;
+}
+@media screen and (max-width: 767px) {
+  .header .navbar .navbar-scrollpy .nav-pills {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+.header .navbar .navbar-scrollpy .nav-pills .nav-item .nav-link {
   color: rgba(255, 255, 255, 0.92);
   font-weight: 600;
   font-size: 18px;
   padding: 8px 20px;
 }
-.header .container .navbar .navbar-scrollpy .nav-pills .nav-item .nav-link.active {
+@media screen and (max-width: 991px) {
+  .header .navbar .navbar-scrollpy .nav-pills .nav-item .nav-link {
+    padding: 8px 15px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .header .navbar .navbar-scrollpy .nav-pills .nav-item .nav-link {
+    color: #000;
+    display: inline;
+  }
+}
+.header .navbar .navbar-scrollpy .nav-pills .nav-item .nav-link.active {
   background-color: transparent;
 }
-.header .container .navbar .navbar-scrollpy .nav-pills .nav-item .nav-link:hover {
+.header .navbar .navbar-scrollpy .nav-pills .nav-item .nav-link:hover {
   background-color: rgba(255, 255, 255, 0.08);
+}
+.header .navbar .menu-icon {
+  display: none;
+}
+@media screen and (max-width: 767px) {
+  .header .navbar .menu-icon {
+    display: block;
+  }
+}
+.header .navbar .menu-icon span {
+  height: 2px;
+  width: 35px;
+  border-radius: 10px;
+  margin: 8px;
+  display: block;
+  background-color: #fff;
+}
+.header .navbar .menu-icon span:nth-child(2) {
+  width: 20px;
+  margin-left: auto;
+}
+.header .navbar .close-icon {
+  display: none;
+  position: absolute;
+  top: -10px;
+  right: 0px;
+}
+@media screen and (max-width: 767px) {
+  .header .navbar .close-icon {
+    display: block;
+  }
+}
+.header .navbar .close-icon i {
+  color: #000;
+  font-size: 45px;
 }
 
 .main-part {
-  padding-inline-start: 5vw;
-  padding-inline-end: 5vw;
-  margin-top: 15vh;
+  padding-inline-start: 16px;
+  padding-inline-end: 16px;
+  margin-top: 83px;
 }
 @media screen and (min-width: 48em) {
   .main-part {
     padding-inline-start: 10vw;
     padding-inline-end: 10vw;
-    margin-top: 22.5vh;
+    margin-top: 83px;
   }
 }
 
+.about-section {
+  padding-top: 100px;
+}
+@media screen and (max-width: 767px) {
+  .about-section {
+    padding-top: 60px;
+  }
+}
 .about-section .heading {
   position: relative;
 }
@@ -97,6 +189,11 @@ h6 {
   font-size: 36px;
   font-weight: 600;
 }
+@media screen and (max-width: 600px) {
+  .about-section .heading p {
+    font-size: 25px;
+  }
+}
 .about-section .main-name-heading {
   font-size: 140px;
   font-weight: 700;
@@ -104,6 +201,21 @@ h6 {
   line-height: 136px;
   letter-spacing: -5px;
   margin-left: -8px;
+}
+@media screen and (max-width: 767px) {
+  .about-section .main-name-heading {
+    font-size: 100px;
+    line-height: 104px;
+    letter-spacing: 1px;
+    margin-left: 0;
+  }
+}
+@media screen and (max-width: 600px) {
+  .about-section .main-name-heading {
+    font-size: 50px;
+    line-height: 55px;
+    letter-spacing: 1px;
+  }
 }
 .about-section .position-info {
   font-size: 25px;
@@ -115,6 +227,11 @@ h6 {
   line-height: 1.2;
   letter-spacing: -0.5px;
 }
+@media screen and (max-width: 767px) {
+  .about-section .position-info {
+    font-size: 18px;
+  }
+}
 .about-section .position-info span {
   color: #fff;
 }
@@ -125,6 +242,11 @@ h6 {
   font-size: 22px;
   line-height: 29px;
   color: #8f9094;
+}
+@media screen and (max-width: 767px) {
+  .about-section .position-skill p {
+    font-size: 16px;
+  }
 }
 .about-section .position-skill p span {
   color: #3ccf91;
@@ -158,12 +280,18 @@ h6 {
 }
 
 .about-me-section {
-  margin-top: 144px;
+  margin-top: 110px;
+}
+@media screen and (max-width: 991px) {
+  .about-me-section {
+    margin-top: 80px;
+  }
 }
 .about-me-section .my-information h2 {
   font-size: 28px;
   font-weight: 700;
   color: #fff;
+  padding-top: 40px;
 }
 .about-me-section .my-information p {
   font-size: 16px;
@@ -180,6 +308,11 @@ h6 {
   justify-content: center;
   border-radius: 100%;
 }
+@media screen and (max-width: 991px) {
+  .about-me-section .my-image {
+    padding-top: 30px;
+  }
+}
 .about-me-section .my-image .my-image-photo {
   max-width: 350px;
   max-height: 350px;
@@ -190,6 +323,18 @@ h6 {
   width: 100%;
   padding: 5px;
   border: 2px solid #3ccf91;
+  transition: all 0.4s;
+}
+@media screen and (max-width: 991px) {
+  .about-me-section .my-image .my-image-photo {
+    margin-bottom: 10px;
+  }
+}
+@media screen and (max-width: 600px) {
+  .about-me-section .my-image .my-image-photo {
+    height: 200px;
+    width: 200px;
+  }
 }
 .about-me-section .my-image .pattern-image {
   position: absolute;
@@ -197,13 +342,20 @@ h6 {
   filter: invert(0.1);
   top: 0;
   right: 0;
+  z-index: -1;
 }
 
 .work-section {
-  margin-top: 144px;
+  margin-top: 120px;
+}
+@media (max-width: 767px) {
+  .work-section {
+    margin-top: 70px;
+  }
 }
 .work-section .work-heading {
   margin-bottom: 30px;
+  padding-top: 30px;
 }
 .work-section .work-heading h4 {
   font-size: 28px;
@@ -231,6 +383,11 @@ h6 {
   border: 1px solid rgb(17, 17, 17);
   border-radius: 10px;
   overflow: hidden;
+  transition: all 0.4s;
+  cursor: pointer;
+}
+.work-section .project-card:hover {
+  transform: scale(1.02);
 }
 .work-section .project-card .project-img img {
   max-height: 500px;
@@ -343,6 +500,11 @@ h6 {
 .skills-section {
   margin-top: 144px;
 }
+@media (max-width: 767px) {
+  .skills-section {
+    margin-top: 100px;
+  }
+}
 .skills-section .skill-heading {
   margin-bottom: 30px;
 }
@@ -356,15 +518,30 @@ h6 {
   color: #8f9094;
   margin-top: 4px;
 }
+@media (max-width: 575px) {
+  .skills-section .skill-heading p {
+    font-size: 18px;
+  }
+}
 .skills-section .skills {
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
 }
+@media screen and (max-width: 767px) {
+  .skills-section .skills {
+    gap: 20px 10px;
+  }
+}
 .skills-section .skills .skill-card {
   display: flex;
   flex-direction: column;
   align-items: center;
+  transition: all 0.4s;
+}
+.skills-section .skills .skill-card:hover img {
+  transform: scale(1.1);
+  cursor: pointer;
 }
 .skills-section .skills .skill-card.postmen-card img {
   background-color: #ff6c37;
@@ -385,6 +562,7 @@ h6 {
   border-radius: 10px;
   -o-object-fit: cover;
      object-fit: cover;
+  transition: all 0.4s;
 }
 .skills-section .skills .skill-card p {
   color: #fff;
@@ -504,8 +682,13 @@ h6 {
 }
 
 .contact-section {
-  margin-top: 144px;
+  margin-top: 120px;
   margin-bottom: 100px;
+}
+@media (max-width: 767px) {
+  .contact-section {
+    margin-top: 70px;
+  }
 }
 .contact-section .heading {
   text-align: center;
@@ -515,13 +698,23 @@ h6 {
   font-weight: 700;
   color: #fff;
   margin-bottom: 20px;
+  padding-top: 30px;
 }
-.contact-section .heading p {
+@media screen and (max-width: 575px) {
+  .contact-section .heading h4 {
+    font-size: 38px;
+  }
+}
+.contact-section .heading .description {
+  display: flex;
+  justify-content: center;
+}
+.contact-section .heading .description p {
   font-size: 16px;
   color: #8f9094;
-  margin-bottom: 30px;
+  margin-bottom: 10px;
 }
-.contact-section .heading p span {
+.contact-section .heading .description p span {
   color: #3ccf91;
 }
 
