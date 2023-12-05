@@ -29,7 +29,7 @@
     <!-- custom-css-file -->
     <link rel="stylesheet" href="css/style.css" type="text/css" />
   </head>
-  <body>
+  <body    >
     <header class="header">
       
         <nav id="navbar-example2" class="navbar">
@@ -41,7 +41,7 @@
 
             <ul class="nav nav-pills">
               <li class="nav-item">
-                <a class="nav-link" href="#">Home</a>
+                <a class="nav-link" href="#home">Home</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="#about">About</a>
@@ -64,15 +64,16 @@
     </header>
 
     <main
-      data-bs-spy="scroll"
-      data-bs-target="#navbar-example2"
-      data-bs-smooth-scroll="true"
-      class="scrollspy-example main-part"
-      tabindex="0"
-      data-bs-root-margin="0px 0px -40%"
+    data-bs-spy="scroll"
+    data-bs-target="#navbar-example2"
+    data-bs-smooth-scroll="true"
+    class="scrollspy-example main-part"
+    tabindex="0"
+    data-bs-root-margin="0px 0px -40%"
+    id="home"
     >
       <!-- about -->
-      <section  class="about-section">
+      <section  class="about-section" id="home">
         <div class="heading">
           <img
             src="images/heading-pattern-img.svg"
@@ -251,46 +252,50 @@
           </div>
           <div class="row g-x-0 g-x-md-5 gy-md-5 gy-4">
             <div class="col-md-6" data-aos="fade-up" data-aos-duration="500">
-              <div class="project-card">
+              <div class="project-card" id="project-card1"> 
                 <div class="project-img">
                   <img src="images/Chatbot - Mockup.png" alt="" />
                 </div>
                 <div class="project-description">
-                  <div class="project-name-heading">
-                    <p>ChatGPT chat boat & AI Image generator</p>
-                  </div>
-                  <div class="technologis">
-                    <span>
-                      <i class="fab fa-swift"></i>
-                      <p>Swift</p>
-                    </span>
-                    <span>
-                      <i class="fab fa-uikit"></i>
-                      <p>UIKit</p>
-                    </span>
-                    <span class="open-ai-cheap">
-                      <img src="images/chatgpt-icon.png" alt="" />
-                      <p>OpenAI API </p>
-                    </span>
-                    <span>
-                      <i class="fas fa-code"></i>
-                      <p>MVVM</p>
-                    </span>
-                  </div>
-                  <p class="description line-clamp-2" id="line-clamp-1">
-                    Developed 'ChatGPT Chat-Boat & AI Image Generator,' an iOS
-                    application utilizing MVVM architecture, Swift, UIKit,
-                    Lottie animations, and the OpenAI API for a continuous
-                    single-session chat experience akin to ChatGPT. Integrated
-                    dark mode support and streamlined one-click chatclearing.
-                    Implemented the DALL-E API for AI-generated image creation.
-                    Proficient in building feature-rich applications and
-                    delivering a seamless user experience.
-                  </p>
-                  <button class="read-more-read-less-btn" id="project-1">
-                    <span class="more" id="more1">Read more</span>
-                    <span class="less" id="less1">Read less</span>
-                  </button>
+                
+
+                    <div class="project-name-heading">
+                      <p>ChatGPT chat boat & AI Image generator</p>
+                    </div>
+                    <div class="technologis">
+                      <span>
+                        <i class="fab fa-swift"></i>
+                        <p>Swift</p>
+                      </span>
+                      <span>
+                        <i class="fab fa-uikit"></i>
+                        <p>UIKit</p>
+                      </span>
+                      <span class="open-ai-cheap">
+                        <img src="images/chatgpt-icon.png" alt="" />
+                        <p>OpenAI API </p>
+                      </span>
+                      <span>
+                        <i class="fas fa-code"></i>
+                        <p>MVVM</p>
+                      </span>
+                    </div>
+                    <p class="description line-clamp-2" id="line-clamp-1">
+                      Developed 'ChatGPT Chat-Boat & AI Image Generator,' an iOS
+                      application utilizing MVVM architecture, Swift, UIKit,
+                      Lottie animations, and the OpenAI API for a continuous
+                      single-session chat experience akin to ChatGPT. Integrated
+                      dark mode support and streamlined one-click chatclearing.
+                      Implemented the DALL-E API for AI-generated image creation.
+                      Proficient in building feature-rich applications and
+                      delivering a seamless user experience.
+                    </p>
+                 
+                    <button class="read-more-read-less-btn" id="project-1">
+                      <span class="more" id="more1">Read more</span>
+                      <span class="less" id="less1">Read less</span>
+                    </button>
+                
                 </div>
               </div>
             </div>
@@ -300,34 +305,40 @@
                   <img src="images/Movies Verse - Mockup.png" alt="" />
                 </div>
                 <div class="project-description">
-                  <div class="project-name-heading">
-                    <p>Movies Verse</p>
+                  <div>
+
+                    <div class="project-name-heading">
+                      <p>Movies Verse</p>
+                    </div>
+                    <div class="technologis">
+                      <span>
+                        <i class="fab fa-swift"></i>
+                        <p>Swift</p>
+                      </span>
+                      <span>
+                        <i class="fab fa-uikit"></i>
+                        <p>UIKit</p>
+                      </span>
+                      <span class="tmdb-api">
+                        <img src="images/tmdb.jpg" alt="" />
+                        <p>TMDb API</p>
+                      </span>
+                      <span>
+                        <i class="fas fa-code"></i>
+                        <p>MVC</p>
+                      </span>
+                    </div>
+                    <p class="description line-clamp-2" id="line-clamp-2">
+                    Developed 'Movies Verse' iOS app using Swift, UIKit, and the MVC architecture pattern. Integrated TMDB API to offer a comprehensive database of thousands of movies. Designed a user-friendly interface allowing seamless exploration of trending, now playing, popular, top-rated, and upcoming movies. enabling users to search movies by name and access details on cast, genres, reviews, release dates, and related movies.
+                    </p>
                   </div>
-                  <div class="technologis">
-                    <span>
-                      <i class="fab fa-swift"></i>
-                      <p>Swift</p>
-                    </span>
-                    <span>
-                      <i class="fab fa-uikit"></i>
-                      <p>UIKit</p>
-                    </span>
-                    <span class="tmdb-api">
-                      <img src="images/tmdb.jpg" alt="" />
-                      <p>TMDb API</p>
-                    </span>
-                    <span>
-                      <i class="fas fa-code"></i>
-                      <p>MVC</p>
-                    </span>
+                  <div>
+
+                    <button class="read-more-read-less-btn" id="project-2">
+                      <span class="more" id="more2">Read more</span>
+                      <span class="less" id="less2">Read less</span>
+                    </button>
                   </div>
-                  <p class="description line-clamp-2" id="line-clamp-2">
-                  Developed 'Movies Verse' iOS app using Swift, UIKit, and the MVC architecture pattern. Integrated TMDB API to offer a comprehensive database of thousands of movies. Designed a user-friendly interface allowing seamless exploration of trending, now playing, popular, top-rated, and upcoming movies. enabling users to search movies by name and access details on cast, genres, reviews, release dates, and related movies.
-                  </p>
-                  <button class="read-more-read-less-btn" id="project-2">
-                    <span class="more" id="more2">Read more</span>
-                    <span class="less" id="less2">Read less</span>
-                  </button>
                 </div>
               </div>
             </div>
@@ -337,34 +348,40 @@
                   <img src="images/Pokedex - Mockup.png" alt="" />
                 </div>
                 <div class="project-description">
-                  <div class="project-name-heading">
-                    <p>Pokedex</p>
+                  <div>
+
+                    <div class="project-name-heading">
+                      <p>Pokedex</p>
+                    </div>
+                    <div class="technologis">
+                      <span>
+                        <i class="fab fa-swift"></i>
+                        <p>Swift</p>
+                      </span>
+                      <span>
+                        <i class="fab fa-uikit"></i>
+                        <p>UIKit</p>
+                      </span>
+                      <span class="pokebox">
+                        <img src="images/poke-ball.png" alt="" />
+                        <p>Pokedex API</p>
+                      </span>
+                      <span>
+                        <i class="fas fa-code"></i>
+                        <p>MVVM</p>
+                      </span>
+                    </div>
+                    <p class="description line-clamp-2" id="line-clamp-3">
+                      Developed 'Pokedex,' an iOS application created with Swift, UIKit, and MVVM architecture. Utilized the Pokedex API to access a comprehensive list of Pokémon, allowing users to explore details such as abilities, group, height, weight, type, species evolution, and powers. Implemented a search feature enabling users to find specific Pokémon by name. The app offers an immersive experience for Pokémon enthusiasts, providing in-depth information and a user-friendly interface for easy exploration.
+                    </p>
                   </div>
-                  <div class="technologis">
-                    <span>
-                      <i class="fab fa-swift"></i>
-                      <p>Swift</p>
-                    </span>
-                    <span>
-                      <i class="fab fa-uikit"></i>
-                      <p>UIKit</p>
-                    </span>
-                    <span class="pokebox">
-                      <img src="images/poke-ball.png" alt="" />
-                      <p>Pokedex API</p>
-                    </span>
-                    <span>
-                      <i class="fas fa-code"></i>
-                      <p>MVVM</p>
-                    </span>
+                  <div>
+
+                    <button class="read-more-read-less-btn" id="project-3">
+                      <span class="more" id="more3">Read more</span>
+                      <span class="less" id="less3">Read less</span>
+                    </button>
                   </div>
-                  <p class="description line-clamp-2" id="line-clamp-3">
-                    Developed 'Pokedex,' an iOS application created with Swift, UIKit, and MVVM architecture. Utilized the Pokedex API to access a comprehensive list of Pokémon, allowing users to explore details such as abilities, group, height, weight, type, species evolution, and powers. Implemented a search feature enabling users to find specific Pokémon by name. The app offers an immersive experience for Pokémon enthusiasts, providing in-depth information and a user-friendly interface for easy exploration.
-                  </p>
-                  <button class="read-more-read-less-btn" id="project-3">
-                    <span class="more" id="more3">Read more</span>
-                    <span class="less" id="less3">Read less</span>
-                  </button>
                 </div>
               </div>
             </div>
@@ -374,39 +391,45 @@
                   <img src="images/Dirbbox - Mockup.png" alt="" />
                 </div>
                 <div class="project-description">
-                  <div class="project-name-heading">
-                    <p>Dirbbox - Cloude Storage</p>
-                  </div>
-                  <div class="technologis">
-                    <span>
-                      <i class="fab fa-swift"></i>
-                      <p>Swift</p>
-                    </span>
-                    <span>
-                      <i class="fab fa-uikit"></i>
-                      <p>UIKit</p>
-                    </span>
-                    <span class="pcloud-api">
-                      <img src="images/pCloud-icon.png" alt="" width="20" height="20" />
-                      <p>pCloud API</p>
-                    </span>
+                  <div>
 
-                    <span class="p-cloud-sdk-cheap">
-                      <i class="bi bi-cloud-arrow-down-fill  p-cloud-sdk-i"></i>
-                      <p>pCloud SDK</p>
-                    </span>
-                    <span>
-                      <i class="fas fa-code" ></i>
-                      <p>MVVM</p>
-                    </span>
+                    <div class="project-name-heading">
+                      <p>Dirbbox - Cloude Storage</p>
+                    </div>
+                    <div class="technologis">
+                      <span>
+                        <i class="fab fa-swift"></i>
+                        <p>Swift</p>
+                      </span>
+                      <span>
+                        <i class="fab fa-uikit"></i>
+                        <p>UIKit</p>
+                      </span>
+                      <span class="pcloud-api">
+                        <img src="images/pCloud-icon.png" alt="" width="20" height="20" />
+                        <p>pCloud API</p>
+                      </span>
+  
+                      <span class="p-cloud-sdk-cheap">
+                        <i class="bi bi-cloud-arrow-down-fill  p-cloud-sdk-i"></i>
+                        <p>pCloud SDK</p>
+                      </span>
+                      <span>
+                        <i class="fas fa-code" ></i>
+                        <p>MVVM</p>
+                      </span>
+                    </div>
+                    <p class="description line-clamp-2" id="line-clamp-4">
+                      Developed 'Dirbbox-Cloud Storage,' an iOS application utilizing Swift, UIKit, and MVVM architecture. Integrated pCloudSDK and API to enable users to manage their cloud storage efficiently. The app allows users to perform various file operations such as creating, renaming, downloading, sharing (view access only), deleting, copying, moving folders and files. Users can also view and manage shared links, access deleted files and folders to either restore or permanently delete them. Additionally, the app supports user authentication (login, logout, signup).
+                    </p>
                   </div>
-                  <p class="description line-clamp-2" id="line-clamp-4">
-                    Developed 'Dirbbox-Cloud Storage,' an iOS application utilizing Swift, UIKit, and MVVM architecture. Integrated pCloudSDK and API to enable users to manage their cloud storage efficiently. The app allows users to perform various file operations such as creating, renaming, downloading, sharing (view access only), deleting, copying, moving folders and files. Users can also view and manage shared links, access deleted files and folders to either restore or permanently delete them. Additionally, the app supports user authentication (login, logout, signup).
-                  </p>
-                  <button class="read-more-read-less-btn" id="project-4">
-                    <span class="more" id="more4">Read more</span>
-                    <span class="less" id="less4">Read less</span>
-                  </button>
+                  <div>
+
+                    <button class="read-more-read-less-btn" id="project-4">
+                      <span class="more" id="more4">Read more</span>
+                      <span class="less" id="less4">Read less</span>
+                    </button>
+                  </div>
                 </div>
               </div>
             </div>
